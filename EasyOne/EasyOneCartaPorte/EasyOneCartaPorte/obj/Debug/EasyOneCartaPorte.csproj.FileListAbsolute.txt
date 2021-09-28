@@ -1,0 +1,14 @@
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\EasyOneCartaPorte.exe.config
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\EasyOneCartaPorte.exe
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\EasyOneCartaPorte.pdb
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\obj\Debug\EasyOneCartaPorte.csproj.AssemblyReference.cache
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\obj\Debug\EasyOneCartaPorte.csproj.CoreCompileInputs.cache
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\obj\Debug\EasyOneCartaPorte.exe
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\obj\Debug\EasyOneCartaPorte.pdb
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\EasyOne.dll
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\Newtonsoft.Json.dll
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\Newtonsoft.Json.xml
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\obj\Debug\EasyOneCartaPorte.csproj.CopyComplete
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\BouncyCastle.Crypto.dll
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\itextsharp.dll
+C:\GithubNeocosmic\EasyOne\EasyOneCartaPorte\EasyOneCartaPorte\bin\Debug\itextsharp.xml

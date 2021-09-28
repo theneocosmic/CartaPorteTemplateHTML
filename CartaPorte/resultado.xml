@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd http://www.sat.gob.mx/CartaPorte http://www.sat.gob.mx/sitio_internet/cfd/CartaPorte/CartaPorte.xsd" Version="3.3" Sello="PvvRiBOLW4I8ZBJE4LaVVsnZrbuqZBfZjQNgMnt4Vp8WaMfpgVfnOmHAj2da0Zq3F5lrDr3McmUxpL9Ve4nrx9pkfHFGOWjU2Y4LI9DdkLFbQbJ+IqyNEb4rroQv4IbUJQobgAtx1s5AqO++gLekp6G9P0bAlb0+OX23ag6gmV7ir/KuJelAMILnAeCErwquKKEwt3HcsO4aujDSZIMzH5EgqziSK8usf4agFJ2WeKVRpUCif9OZ7NXnDElGKUB5NfRT/tSuG69iahE73E1HusL3Qw1myvjhxdaSuGlJzsuRmRKRB6+pV1QXo9gcBfVWa7vryvXGYFIzty58LEu9Wg==" NoCertificado="30001000000400002434" Certificado="MIIFuzCCA6OgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDI0MzQwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNjE3MTk0NDE0WhcNMjMwNjE3MTk0NDE0WjCB4jEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gWElRQjg5MTExNlFFNDEeMBwGA1UEBRMVIC8gWElRQjg5MTExNk1HUk1aUjA1MR4wHAYDVQQLExVFc2N1ZWxhIEtlbXBlciBVcmdhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN0peKpgfOL75iYRv1fqq+oVYsLPVUR/GibYmGKc9InHFy5lYF6OTYjnIIvmkOdRobbGlCUxORX/tLsl8Ya9gm6Yo7hHnODRBIDup3GISFzB/96R9K/MzYQOcscMIoBDARaycnLvy7FlMvO7/rlVnsSARxZRO8Kz8Zkksj2zpeYpjZIya/369+oGqQk1cTRkHo59JvJ4Tfbk/3iIyf4H/Ini9nBe9cYWo0MnKob7DDt/vsdi5tA8mMtA953LapNyCZIDCRQQlUGNgDqY9/8F5mUvVgkcczsIgGdvf9vMQPSf3jjCiKj7j6ucxl1+FwJWmbvgNmiaUR/0q4m2rm78lFAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQBcpj1TjT4jiinIujIdAlFzE6kRwYJCnDG08zSp4kSnShjxADGEXH2chehKMV0FY7c4njA5eDGdA/G2OCTPvF5rpeCZP5Dw504RZkYDl2suRz+wa1sNBVpbnBJEK0fQcN3IftBwsgNFdFhUtCyw3lus1SSJbPxjLHS6FcZZ51YSeIfcNXOAuTqdimusaXq15GrSrCOkM6n2jfj2sMJYM2HXaXJ6rGTEgYmhYdwxWtil6RfZB+fGQ/H9I9WLnl4KTZUS6C9+NLHh4FPDhSk19fpS2S/56aqgFoGAkXAYt9Fy5ECaPcULIfJ1DEbsXKyRdCv3JY89+0MNkOdaDnsemS2o5Gl08zI4iYtt3L40gAZ60NPh31kVLnYNsmvfNxYyKp+AeJtDHyW9w7ftM0Hoi+BuRmcAQSKFV3pk8j51la+jrRBrAUv8blbRcQ5BiZUwJzHFEKIwTsRGoRyEx96sNnB03n6GTwjIGz92SmLdNl95r9rkvp+2m4S6q1lPuXaFg7DGBrXWC8iyqeWE2iobdwIIuXPTMVqQb12m1dAkJVRO5NdHnP/MpqOvOgLqoZBNHGyBg4Gqm4sCJHCxA1c8Elfa2RQTCk0tAzllL4vOnI1GHkGJn65xokGsaU4B4D36xh7eWrfj4/pgWHmtoDAYa8wzSwo2GVCZOs+mtEgOQB91/g==" Serie="CP" Folio="1" Fecha="2021-09-26T13:24:29" FormaPago="99" SubTotal="15635.00" Descuento="7736.00" Moneda="MXN" TipoCambio="1" Total="7899.00" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="64000" xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cartaporte="http://www.sat.gob.mx/CartaPorte">
+	<cfdi:Emisor Rfc="EKU9003173C9" Nombre="emisor" RegimenFiscal="601"/>
+	<cfdi:Receptor Rfc="XAXX010101000" Nombre="receptor" UsoCFDI="P01"/>
+	<cfdi:Conceptos>
+		<cfdi:Concepto ClaveProdServ="11101606" Cantidad="1" ClaveUnidad="ACT" Descripcion="Ejemplo CartaPorte" ValorUnitario="15635.00" Importe="15635.00" Descuento="7736.00">
+			<cfdi:Impuestos>
+				<cfdi:Traslados>
+					<cfdi:Traslado Base="15635.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.000000" Importe="0.00"/>
+				</cfdi:Traslados>
+				<cfdi:Retenciones>
+					<cfdi:Retencion Base="15635.00" Impuesto="001" TipoFactor="Tasa" TasaOCuota="0.000000" Importe="0.00"/>
+					<cfdi:Retencion Base="15635.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.000000" Importe="0.00"/>
+				</cfdi:Retenciones>
+			</cfdi:Impuestos>
+			<cfdi:InformacionAduanera NumeroPedimento="16  16  3990  6000525"/>
+		</cfdi:Concepto>
+	</cfdi:Conceptos>
+	<cfdi:Impuestos TotalImpuestosRetenidos="0.00" TotalImpuestosTrasladados="0.00">
+		<cfdi:Retenciones>
+			<cfdi:Retencion Impuesto="001" Importe="0.00"/>
+			<cfdi:Retencion Impuesto="002" Importe="0.00"/>
+		</cfdi:Retenciones>
+		<cfdi:Traslados>
+			<cfdi:Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.000000" Importe="0.00"/>
+		</cfdi:Traslados>
+	</cfdi:Impuestos>
+	<cfdi:Complemento>
+		<tfd:TimbreFiscalDigital xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigitalv11.xsd" Version="1.1" UUID="8AD87341-0928-490A-82E1-61F6491BE702" FechaTimbrado="2021-09-27T18:59:43" RfcProvCertif="AAA010101AAA" SelloCFD="PvvRiBOLW4I8ZBJE4LaVVsnZrbuqZBfZjQNgMnt4Vp8WaMfpgVfnOmHAj2da0Zq3F5lrDr3McmUxpL9Ve4nrx9pkfHFGOWjU2Y4LI9DdkLFbQbJ+IqyNEb4rroQv4IbUJQobgAtx1s5AqO++gLekp6G9P0bAlb0+OX23ag6gmV7ir/KuJelAMILnAeCErwquKKEwt3HcsO4aujDSZIMzH5EgqziSK8usf4agFJ2WeKVRpUCif9OZ7NXnDElGKUB5NfRT/tSuG69iahE73E1HusL3Qw1myvjhxdaSuGlJzsuRmRKRB6+pV1QXo9gcBfVWa7vryvXGYFIzty58LEu9Wg==" NoCertificadoSAT="20001000000100005761" SelloSAT="rixitCDOBQdqBPcGYskJxzsDEmZ3G1vTJNuZ0Rs9bK3nj44JYQ2l0gu0tZj5dwapvV16aG2R6vVYcEoor32+meaYRXoqz+nqrf69qHSsrujylpDK206PNjPKFxjYWV0UUTbGXe5o+lyUHmaGUWEsyLZadpNyTyF6ii34bZPTSKw=" xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+		<cartaporte:CartaPorte xsi:schemaLocation="http://www.sat.gob.mx/CartaPorte http://www.sat.gob.mx/sitio_internet/cfd/CartaPorte/CartaPorte.xsd" Version="1.0" TranspInternac="No" TotalDistRec="200.00" xmlns:tdCFDI="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI" xmlns:catComExt="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/ComExt" xmlns:catCFDI="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" xmlns:catCartaPorte="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/CartaPorte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<cartaporte:Ubicaciones>
+				<cartaporte:Ubicacion DistanciaRecorrida="100.00">
+					<cartaporte:Origen NombreRemitente="NombreRemitente1" NumRegIdTrib="NumRegIdTrib1" ResidenciaFiscal="AFG" FechaHoraSalida="2021-01-01T01:01:01"/>
+					<cartaporte:Destino NombreDestinatario="NombreDestinatario1" NumRegIdTrib="NumRegIdTrib1" ResidenciaFiscal="AFG" FechaHoraProgLlegada="2021-01-01T05:01:01"/>
+					<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="AFG" CodigoPostal="CodigoPosta1"/>
+				</cartaporte:Ubicacion>
+				<cartaporte:Ubicacion DistanciaRecorrida="100.00">
+					<cartaporte:Origen NombreRemitente="NombreRemitente1" NumRegIdTrib="NumRegIdTrib1" ResidenciaFiscal="AFG" FechaHoraSalida="2021-01-01T01:01:01"/>
+					<cartaporte:Destino NombreDestinatario="NombreDestinatario1" NumRegIdTrib="NumRegIdTrib1" ResidenciaFiscal="AFG" FechaHoraProgLlegada="2021-01-01T05:01:01"/>
+					<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="AFG" CodigoPostal="CodigoPostal"/>
+				</cartaporte:Ubicacion>
+			</cartaporte:Ubicaciones>
+			<cartaporte:Mercancias UnidadPeso="Tu" PesoNetoTotal="1.00" NumTotalMercancias="1" CargoPorTasacion="0.000000">
+				<cartaporte:Mercancia BienesTransp="11101606" ClaveSTCC="01" Descripcion="Descripcion1" Cantidad="1.00" ClaveUnidad="18" Unidad="Unidad1" Dimensiones="01/01/01cm" MaterialPeligroso="Sí" CveMaterialPeligroso="M0001" Embalaje="1A1" DescripEmbalaje="DescripEmbalaje1" PesoEnKg="100.00" ValorMercancia="0.000000" Moneda="AED"/>
+				<cartaporte:AutotransporteFederal PermSCT="TPAF01" NumPermisoSCT="NumPermisoSCT1" NombreAseg="NombreAseg1" NumPolizaSeguro="NumPolizaSeguro1">
+					<cartaporte:IdentificacionVehicular ConfigVehicular="C2" PlacaVM="ABC123" AnioModeloVM="2020"/>
+					<cartaporte:Remolques>
+						<cartaporte:Remolque SubTipoRem="CTR001" Placa="Placa1"/>
+						<cartaporte:Remolque SubTipoRem="CTR002" Placa="Placa2"/>
+					</cartaporte:Remolques>
+				</cartaporte:AutotransporteFederal>
+			</cartaporte:Mercancias>
+			<cartaporte:FiguraTransporte CveTransporte="01">
+				<cartaporte:Operadores>
+					<cartaporte:Operador RFCOperador="AAAA0001023NA" NumLicencia="NumLicencia1" NombreOperador="NombreOperador1">
+						<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="AFG" CodigoPostal="CodigoPostal"/>
+					</cartaporte:Operador>
+				</cartaporte:Operadores>
+				<cartaporte:Propietario NombrePropietario="NombrePropietario1" NumRegIdTribPropietario="NumRegIdTribPropietario1" ResidenciaFiscalPropietario="AFG">
+					<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="AFG" CodigoPostal="CodigoPostal"/>
+				</cartaporte:Propietario>
+				<cartaporte:Arrendatario NombreArrendatario="NombrePropietario1" NumRegIdTribArrendatario="NumRegIdTribPropietario1" ResidenciaFiscalArrendatario="AFG">
+					<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="AFG" CodigoPostal="CodigoPostal"/>
+				</cartaporte:Arrendatario>
+				<cartaporte:Notificado NombreNotificado="NombrePropietario1" NumRegIdTribNotificado="NumRegIdTribPropietario1" ResidenciaFiscalNotificado="ALB">
+					<cartaporte:Domicilio Calle="Calle1" NumeroExterior="NumeroExterior1" NumeroInterior="NumeroInterior1" Colonia="Colonia1" Localidad="Localidad1" Referencia="Referencia1" Municipio="Municipio1" Estado="Estado1" Pais="ALB" CodigoPostal="CodigoPostal"/>
+				</cartaporte:Notificado>
+			</cartaporte:FiguraTransporte>
+		</cartaporte:CartaPorte>
+	</cfdi:Complemento>
+</cfdi:Comprobante>

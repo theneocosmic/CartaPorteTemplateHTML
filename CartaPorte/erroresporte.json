@@ -1,0 +1,1242 @@
+[
+	{
+		"NUM": 1.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Version",
+		"CASODEVALIDACION": "El valor registrado debe ser “3.3”.",
+		"CODIGOERROR": "CP101",
+		"ERROR": "El valor registrado en este atributo es diferente a \"3.3\""
+	},
+	{
+		"NUM": 2.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Subtotal",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"T\" que corresponde a la descripción de “Traslado”, debe registrar el valor igual a cero.",
+		"CODIGOERROR": "CP102",
+		"ERROR": "El valor registrado en el atributo  \"Subtotal\"  es diferente de cero o el valor del atributo \"TipoDeComprobante\" es diferente de \"T\"."
+	},
+	{
+		"NUM": 3.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Moneda",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “T” que corresponde a la descripción de “Traslado”, se debe registrar el valor “XXX”.",
+		"CODIGOERROR": "CP103",
+		"ERROR": "El valor registrado en el atributo \"Moneda\" es diferente de \"XXX\"."
+	},
+	{
+		"NUM": 4.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Moneda",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “I” que corresponde a la descripción de “Ingreso”, este atributo debe contener un valor diferente de “XXX”.",
+		"CODIGOERROR": "CP104",
+		"ERROR": "El valor registrado en el atributo \"Moneda\" es igual a \"XXX\"."
+	},
+	{
+		"NUM": 5.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Total",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “T” que corresponde a la descripción de “Traslado”, debe registrar el valor igual a cero.",
+		"CODIGOERROR": "CP105",
+		"ERROR": "El valor registrado en el atributo \"Total\" es diferente de cero o el valor del atributo \"TipoDeComprobante\" es diferente de \"T\"."
+	},
+	{
+		"NUM": 6.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "CfdiRelacionados",
+		"CASODEVALIDACION": "Se debe registrar información en este nodo siempre que el atributo \"TipoDeComprobante\" contenga el valor \"I\" que corresponde a la descripción de “Ingreso” y además que en el complemento Carta Porte, se registre:\n• El atributo \"Ubicaciones:Ubicacion:TipoEstacion\" con el valor \"02\" que corresponde a \"Intermedia\".\n• El nodo \"Mercancias:TransporteFerroviario\".\nAdemás el atributo \"TipoRelacion\" debe contener el valor \"05\" que corresponde a \"Traslados de mercancías facturados previamente\".\nY el valor del atributo \"Fecha\" debe contener al menos una diferencia de 6:00:00 horas respecto de la factura inicial, la cual se relaciona, siempre que se cuente con dicha información.",
+		"CODIGOERROR": "CP106",
+		"ERROR": "El valor del atributo \"TipoDeComprobante\" es diferente de \"I\", o el valor registrado en el atributo \"TipoEstacion\" es diferente de \"02\" \"Intermedia\", o el nodo registrado en \"Mercancias\" es diferente de \"TransporteFerroviario\", o el valor del atributo \"TipoRelacion\" es diferente de \"05\"."
+	},
+	{
+		"NUM": 7.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Rfc",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “T” que corresponde a la descripción de “Traslado”, este atributo debe contener el valor “XAXX010101000”; en otro caso se podrá capturar el RFC del cliente, siempre y cuando se encuentre en la lista del RFC Inscritos no cancelados del SAT l_RFC. ",
+		"CODIGOERROR": "CP107",
+		"ERROR": "El valor registrado en el atributo \"RFC\" no es \"XAXX010101000\" o bien no existe en la lista de RFC inscritos no cancelados en el SAT (l_RFC)."
+	},
+	{
+		"NUM": 8.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "Rfc",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “I” que corresponde a la descripción de “Ingreso”, y cuando no se utilice el RFC genérico, el RFC debe estar en la lista de RFC inscritos no cancelados en el SAT.",
+		"CODIGOERROR": "CP108",
+		"ERROR": "El RFC receptor no es un genérico o no está en la lista de RFC inscritos no cancelados en el SAT."
+	},
+	{
+		"NUM": 9.0,
+		"ELEMENTO": "CFDI",
+		"ATRIBUTO": "UsoCFDI",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"T\" que corresponde a la descripción de \"Traslado\", este atributo debe contener el valor \"P01\" con descripción \"Por definir\". \n \n",
+		"CODIGOERROR": "CP109",
+		"ERROR": "El valor registrado en el atributo \"UsoCFDI\", es diferente de \"P01\" (Por definir)."
+	},
+	{
+		"NUM": 10.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CartaPorte",
+		"CASODEVALIDACION": "El nodo \"CartaPorte\" se debe registrar como un nodo hijo del nodo Complemento en el CFDI.",
+		"CODIGOERROR": "CP110",
+		"ERROR": "El nodo  \"CartaPorte\" no se registró como nodo hijo del nodo complemento del CFDI."
+	},
+	{
+		"NUM": 11.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CartaPorte",
+		"CASODEVALIDACION": "En el CFDI solo debe existir un nodo de \"CartaPorte\".",
+		"CODIGOERROR": "CP111",
+		"ERROR": "Existe más de un nodo \"CartaPorte\"."
+	},
+	{
+		"NUM": 12.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CartaPorte",
+		"CASODEVALIDACION": "Este complemento puede coexistir con los siguientes complementos: Timbre Fiscal Digital y aquellos Complementos Concepto en los que se defina su relación con este complemento.",
+		"CODIGOERROR": "CP112",
+		"ERROR": "El complemento registrado de manera adicional, no corresponde con los complemento con los cuales puede coexistir. "
+	},
+	{
+		"NUM": 13.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CartaPorte",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" es distinto de \"I\" o \"T\", este complemento no debe existir.\n",
+		"CODIGOERROR": "CP113",
+		"ERROR": "El valor registrado en \"TipoDeComprobante\" es diferente de \"I\" o \"T\"."
+	},
+	{
+		"NUM": 14.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TranspInternac",
+		"CASODEVALIDACION": "Si este atributo contiene el valor \"Sí\" se debe capturar información en los atributos \"EntradaSalidaMerc\" y \"ViaEntradaSalida\"”.",
+		"CODIGOERROR": "CP114",
+		"ERROR": "Se debe registrar información en el atributo \"EntradaSalidaMerc\" y \"ViaEntradaSalida\".\n\n"
+	},
+	{
+		"NUM": 15.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TranspInternac",
+		"CASODEVALIDACION": "Tratándose de un CFDI de tipo “I” que corresponde a la descripción de Ingreso, se deberá relacionar los números de pedimento dentro del nodo InformacionAduanera que se encuentra a nivel Concepto para los bienes o mercancías que se trasladan asociadas al servicio y si existe el nodo “Mercancias:AutotransporteFederal” entonces:\n    *Debe existir información en los nodos “Cfdi:Conceptos:Concepto:Impuestos:Traslados” y “Cfdi:Conceptos:Concepto:Impuestos:Retenciones”.",
+		"CODIGOERROR": "CP115",
+		"ERROR": "Se deben relacionar los números de pedimento dentro del nodo \"InformacionAduanera\" a nivel Concepto para los bienes o mercancías que se trasladan asociadas al servicio, siempre que exista el nodo “Mercancias:AutotransporteFederal”, el tipo de comprobante sea \"I\" y deberá registrar información en los nodos \"Impuestos:Traslados\",  e \"Impuestos:Retenciones\" a nivel CFDI."
+	},
+	{
+		"NUM": 16.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TranspInternac",
+		"CASODEVALIDACION": "Tratándose de un CFDI de tipo “T” que corresponde a la descripción de Traslado, se debe registrar la información del número de pedimento dentro del nodo InformacionAduanera que se encuentra a nivel Concepto, para cada uno de los bienes o mercancías registrados a nivel CFDI que se están trasladando.",
+		"CODIGOERROR": "CP116",
+		"ERROR": "Siempre que el tipo de comprobante sea \"T\", se debe registrar información del número de pedimento en el nodo \"InformacionAduanera\" a nivel Concepto para los bienes o mercancías registrados a nivel CFDI."
+	},
+	{
+		"NUM": 17.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TranspInternac",
+		"CASODEVALIDACION": "Si este atributo contiene el valor \"No\" los atributos \"EntradaSalidaMerc\" y \"ViaEntradaSalida\" no deben existir.",
+		"CODIGOERROR": "CP117",
+		"ERROR": "No se debe registrar información en el atributo \"EntradaSalidaMerc\" y \"ViaEntradaSalida\".\n\n"
+	},
+	{
+		"NUM": 18.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TranspInternac",
+		"CASODEVALIDACION": "Si este atributo contiene el valor \"No\", el atributo \"TipoDeComprobante\" contiene el valor \"I\" y si existe el nodo \"Mercancias:AutotransporteFederal\" entonces:\n• Debe existir información en los nodos \"Cfdi:Conceptos:Concepto:Impuestos:Traslados\" y \"Cfdi:Conceptos:Concepto:Impuestos:Retenciones\".\nLo anterior de acuerdo a las disposiciones fiscales aplicables vigentes.",
+		"CODIGOERROR": "CP118",
+		"ERROR": "Se debe registrar información en el nodo  \"Impuestos:Traslados\",  y en el nodo \"Impuestos:Retenciones\" a nivel CFDI, siempre que  el tipo de comprobante sea \"I\" y exista el nodo \"Mercancias:AutotransporteFederal\". "
+	},
+	{
+		"NUM": 19.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TotalDistRec",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:AutotransporteFederal\" o \"Mercancias:TransporteFerroviario\", este atributo debe contener un valor; en caso de que no exista alguno de los nodos antes mencionados, este atributo no debe existir.",
+		"CODIGOERROR": "CP119",
+		"ERROR": "El valor registrado en el nodo \"Mercancias\" es diferente a \"TransporteFerroviario\" o \"AutotransporteFederal\"."
+	},
+	{
+		"NUM": 20.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TotalDistRec",
+		"CASODEVALIDACION": "El valor registrado deberá corresponder con la suma de los atributos \"DistanciaRecorrida\" de los nodos \"Ubicaciones:Ubicacion\", siempre que exista el nodo \"Ubicaciones:Ubicacion:Origen\" y \"Ubicaciones:Ubicacion:Destino\" con un solo domicilio o solo el nodo \"Ubicaciones:Ubicacion:Destino\".",
+		"CODIGOERROR": "CP120",
+		"ERROR": "El valor registrado no coincide con la suma de los atributos \"DistanciaRecorrida\"."
+	},
+	{
+		"NUM": 21.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicación",
+		"CASODEVALIDACION": "Si existe el nodo “Mercancias:TransporteFerroviario”, solo deberá existir un nodo “Ubicaciones:Ubicacion:Origen”. ",
+		"CODIGOERROR": "CP121",
+		"ERROR": "Existen más de un nodo “Ubicaciones:Ubicacion:Origen” "
+	},
+	{
+		"NUM": 22.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicación",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteFerroviario\" y a nivel comprobante no existe el nodo \"CfdiRelacionados\", entonces deben existir \"6\" nodos “Ubicacion:Destino”.",
+		"CODIGOERROR": "CP122",
+		"ERROR": "El número de nodos \"Ubicacion:Destino\" registrados es menor o mayor que \"6\"."
+	},
+	{
+		"NUM": 23.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicación",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteFerroviario\" y a nivel  comprobante existe el nodo \"CfdiRelacionados\", entonces deben existir \"5\" nodos \"Ubicacion:Destino\".",
+		"CODIGOERROR": "CP123",
+		"ERROR": "El número de nodos \"Ubicacion:Destino\" registrados es menor o mayor que \"5\"."
+	},
+	{
+		"NUM": 24.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicación",
+		"CASODEVALIDACION": "En el caso de los nodos \"Mercancias:AutotransporteFederal\", \"Mercancias:TransporteMaritimo\" y \"Mercancias:TransporteAereo\" al menos deben existir \"2\" nodos \"Ubicaciones:Ubicacion\", para el registro del nodo \"Origen\" y \"Destino\", respectivamente.",
+		"CODIGOERROR": "CP124",
+		"ERROR": "El número de nodos de \"Ubicacion\" es menor a \"2\", o no existe el nodo \"Origen\" y/o \"Destino\". "
+	},
+	{
+		"NUM": 25.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TipoEstacion",
+		"CASODEVALIDACION": "Si el atributo \"TranspInternac\" contiene el valor \"No\" y si existe el nodo \"Mercancias:TransporteFerroviario\",  \"Mercancias:TransporteMaritimo\" o \"Mercancias:TransporteAereo\", este atributo se debe registrar y debe contener una clave del catálogo \"catCartaPorte:c_TipoEstacion\".",
+		"CODIGOERROR": "CP125",
+		"ERROR": "La clave registrada en el atributo \"TipoEstacion\" es diferente a las contenidas en el catálogo \"c_TipoEstacion\" o se registro el nodo \"Mercancias:AutotransporteFederal\"."
+	},
+	{
+		"NUM": 26.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TipoEstacion",
+		"CASODEVALIDACION": "En otro caso, si el atributo \"TranspInternac\" contiene el valor \"Sí\" este atributo no debe registrarse siempre que el origen o destino de los bienes o mercancías sea fuera de territorio nacional, por lo que el atributo \"Ubicacion:Domicilio:Pais\" debe contener una clave distinta de \"MEX\", en caso contrario se debe registrar una clave del catálogo \"catCartaPorte:c_TipoEstacion\".",
+		"CODIGOERROR": "CP126",
+		"ERROR": "Este atributo no debe registrarse siempre que el atributo \"TranspInternac\" contenga el valor \"Sí\" y el valor del atributo \"Ubicacion:Domicilio:Pais\" contenga el valor \"MEX\"."
+	},
+	{
+		"NUM": 27.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "DistanciaRecorrida",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:AutotransporteFederal\" o \"Mercancias:TransporteFerroviario\", y el nodo \"Ubicacion:Destino\", este atributo será requerido.",
+		"CODIGOERROR": "CP127",
+		"ERROR": "Se debe registrar información en el atributo \"DistanciaRecorrida\" o se registro el nodo \"Mercancias:TransporteAereo\" o \"Mercancias:TransporteMaritimo\"."
+	},
+	{
+		"NUM": 28.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "DistanciaRecorrida",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:AutotransporteFederal\" y el nodo de \"Ubicacion:Origen\"  y \"Ubicacion:Destino\", corresponden al mismo domicilio ubicado en el nodo \"Ubicaciones:Ubicacion\", este atributo será requerido.",
+		"CODIGOERROR": "CP128",
+		"ERROR": "Se debe registrar información en el atributo \"DistanciaRecorrida\" o el nodo de \"Ubicacion:Origen\"  y \"Ubicacion:Destino\", no corresponden al mismo domicilio."
+	},
+	{
+		"NUM": 29.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:IDOrigen",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:Mercancia:CantidadTransporta\", este atributo debe existir, en caso contrario dicho atributo no debe existir.",
+		"CODIGOERROR": "CP129",
+		"ERROR": "Se debe registrar siempre que exista el nodo \"Mercancias:Mercancia:CantidadTransporta\".\n"
+	},
+	{
+		"NUM": 30.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:RFCRemitente",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"T\" que corresponde a la descripción de “Traslado”, este atributo se puede omitir siempre que el RFC del emisor, sea el mismo que el remitente, de no ser así se debe registrar un RFC diferente al emisor del comprobante, el cual debe estar registrado en la lista de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP130",
+		"ERROR": "El tipo de comprobante no es de tipo \"T\" o el RFC del remitente no se encuentra en la lista de RFC inscritos no cancelados del SAT l_RFC."
+	},
+	{
+		"NUM": 31.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:RFCRemitente",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"I\" que corresponde a la descripción de “Ingreso”, este atributo se puede omitir siempre que el RFC del receptor, sea el mismo que el remitente, de no ser así se debe registrar un RFC diferente al receptor del comprobante, el cual debe estar registrado en la lista de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP131",
+		"ERROR": "El tipo de comprobante no es de tipo \"I\" o el RFC del remitente no se encuentra en la lista de RFC inscritos no cancelados del SAT l_RFC."
+	},
+	{
+		"NUM": 32.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:RFCRemitente",
+		"CASODEVALIDACION": "Si el remitente de las mercancías que se transportan es extranjero, este atributo no debe existir.",
+		"CODIGOERROR": "CP132",
+		"ERROR": "Si existe información en el atributo \"Origen:NumRegIdTrib\" no se debe registrar información en el atributo \"Origen:RFCRemitente\"."
+	},
+	{
+		"NUM": 33.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NumRegIdTrib",
+		"CASODEVALIDACION": "Si el atributo “RFCRemitente\" es el mismo que el RFC Emisor, este atributo se puede omitir, en caso de que el remitente sea extranjero este atributo debe contener un valor , para lo cual se debe identificar el país de residencia para efectos fiscales del remitente usando la clave del país registrada en el atributo \"Ubicaciones:Ubicacion:Origen:ResidenciaFiscal\". ",
+		"CODIGOERROR": "CP133",
+		"ERROR": "El atributo \"Origen:NumRegIdTrib\", esta vacío o ya existe el atributo \"Origen:RFCRemitente\". "
+	},
+	{
+		"NUM": 34.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NumRegIdTrib",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.",
+		"CODIGOERROR": "CP134",
+		"ERROR": "El atributo \"Origen:NumRegIdTrib\" no tiene un valor que exista en el registro del país indicado en el atributo \"Origen:ResidenciaFiscal\"."
+	},
+	{
+		"NUM": 35.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NumRegIdTrib",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP135",
+		"ERROR": "El atributo \"Origen:NumRegIdTrib\" no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"Origen:ResidenciaFiscal\"."
+	},
+	{
+		"NUM": 36.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:ResidenciaFiscal",
+		"CASODEVALIDACION": "Si se registra información en el atributo \"Ubicaciones:Ubicacion:Origen:NumRegIdTrib\" este atributo debe existir, en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP136",
+		"ERROR": "No existe información en el atributo \"Ubicaciones:Ubicacion:Origen:NumRegIdTrib\"."
+	},
+	{
+		"NUM": 37.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NumEstacion",
+		"CASODEVALIDACION": "Si solo existe un nodo \"Mercancias:AutotransporteFederal\", este atributo no debe existir.",
+		"CODIGOERROR": "CP137",
+		"ERROR": "Se registró información en el atributo \"Origen:NumEstacion\" cuando solo existe un nodo \"Mercancias:AutotransporteFederal\"."
+	},
+	{
+		"NUM": 38.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NumEstacion",
+		"CASODEVALIDACION": "En caso de que exista el nodo “Mercancias:TransporteMaritimo”, que corresponde a la clave “02”, “Mercancias:TransporteAereo” con valor “03” o “Mercancias:TransporteFerroviario” con clave “04”,  de la columna “Clave transporte” del catálogo “catCartaPorte:c_Estaciones”; este atributo debe contener un valor de la columna “Clave identificación” que corresponda al mismo catálogo. ",
+		"CODIGOERROR": "CP138",
+		"ERROR": "El atributo \"Origen:NumEstacion\" tiene un valor no permitido."
+	},
+	{
+		"NUM": 39.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NombreEstacion",
+		"CASODEVALIDACION": "Si el atributo \"NumEstacion\" cuenta con un valor del catálogo \"catCartaPorte:c_Estaciones\", este atributo debe existir, en caso contrario se debe omitir. ",
+		"CODIGOERROR": "CP139",
+		"ERROR": "No existe \"NumEstacion\" que corresponde al medio de transporte.."
+	},
+	{
+		"NUM": 40.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NombreEstacion",
+		"CASODEVALIDACION": "En caso de que la clave del atributo \"NumEstacion\" sea la referida a una extranjera, se debe registrar el nombre de dicha estación.",
+		"CODIGOERROR": "CP140",
+		"ERROR": "La descripción \"Extranjera\" no es un valor valido para el nombre de la estación."
+	},
+	{
+		"NUM": 41.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Origen:NavegacionTrafico",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteMaritimo\", este atributo debe contener un valor, en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP141",
+		"ERROR": "No existe el nodo \"Mercancias:TransporteMaritimo\" y se registra información en el atributo \"Origen:NavegacionTrafico\"."
+	},
+	{
+		"NUM": 42.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:IDDestino ",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:Mercancia:CantidadTransporta\" este atributo debe existir, en caso contrario dicho atributo no debe existir.",
+		"CODIGOERROR": "CP142",
+		"ERROR": "Se debe registrar siempre que exista el nodo \"Mercancias:Mercancia:CantidadTransporta\".\n"
+	},
+	{
+		"NUM": 43.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:RFCDestinatario",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"T\" que corresponde a la descripción de “Traslado”, este atributo se puede omitir siempre que el RFC del emisor, sea el mismo que el destinatario, de no ser así se debe registrar un RFC diferente al emisor del comprobante, el cual debe estar registrado en la lista de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP143",
+		"ERROR": "El tipo de comprobante no es de tipo \"T\" o el RFC del destinatario no se encuentra en la lista de RFC inscritos no cancelados del SAT l_RFC"
+	},
+	{
+		"NUM": 44.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:RFCDestinatario",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"I\" que corresponde a la descripción de “Ingreso”, este atributo se puede omitir siempre que el RFC del receptor, sea el mismo que el destinatario, de no ser así se debe registrar un RFC diferente al receptor del comprobante, el cual debe estar registrado en la lista de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP144",
+		"ERROR": "El tipo de comprobante no es de tipo \"I\" o el RFC del destinatario no se encuentra en la lista de RFC inscritos no cancelados del SAT l_RFC"
+	},
+	{
+		"NUM": 45.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:RFCDestinatario",
+		"CASODEVALIDACION": "Si el destinatario de las mercancías que se transportan es extranjero, este atributo no debe existir.",
+		"CODIGOERROR": "CP145",
+		"ERROR": "Si existe información en el atributo \"Destino:NumRegIdTrib\" no se debe registrar información en el atributo \"Destino:RFCDestinatario\"."
+	},
+	{
+		"NUM": 46.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NumRegIdTrib",
+		"CASODEVALIDACION": "Si la clave registrada en el atributo \"ResidenciaFiscal\" es distinta a “MEX” este atributo debe contener un valor.  ",
+		"CODIGOERROR": "CP146",
+		"ERROR": "La clave registrada en el atributo \"ResidenciaFiscal\" es \"MEX\"."
+	},
+	{
+		"NUM": 47.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NumRegIdTrib",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.",
+		"CODIGOERROR": "CP147",
+		"ERROR": "El atributo \"Destino:NumRegIdTrib\" no tiene un valor que exista en el registro del país indicado en el atributo \"Destino:ResidenciaFiscal\"."
+	},
+	{
+		"NUM": 48.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NumRegIdTrib",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP148",
+		"ERROR": "El atributo \"Destino:NumRegIdTrib\" no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"Destino:ResidenciaFiscal\"."
+	},
+	{
+		"NUM": 49.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:ResidenciaFiscal",
+		"CASODEVALIDACION": "Si se registra información en el atributo \"Ubicaciones:Ubicacion:Destino:NumRegIdTrib\" este atributo debe existir, en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP149",
+		"ERROR": "No existe información en el atributo \"Ubicaciones:Ubicacion:Destino:NumRegIdTrib\"."
+	},
+	{
+		"NUM": 50.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NumEstacion",
+		"CASODEVALIDACION": "Si solo existe un nodo \"Mercancias:AutotransporteFederal\", este atributo no debe existir.",
+		"CODIGOERROR": "CP150",
+		"ERROR": "Se registró información en el atributo \"Destino:NumEstacion\" cuando solo existe un nodo \"Mercancias:AutotransporteFederal\"."
+	},
+	{
+		"NUM": 51.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NumEstacion",
+		"CASODEVALIDACION": "En caso de que exista el nodo “Mercancias:TransporteMaritimo”, que corresponde a la clave “02”, “Mercancias:TransporteAereo” con valor “03” o “Mercancias:TransporteFerroviario” con clave “04”,  de la columna “Clave transporte” del catálogo “catCartaPorte:c_Estaciones”; este atributo debe contener un valor de la columna “Clave identificación” que corresponda al mismo catálogo.",
+		"CODIGOERROR": "CP151",
+		"ERROR": "El atributo \"Destino:NumEstacion\" tiene un valor no permitido."
+	},
+	{
+		"NUM": 52.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NombreEstacion",
+		"CASODEVALIDACION": "Si el atributo \"NumEstacion\" cuenta con un valor del catálogo \"catCartaPorte:c_Estaciones\", este atributo debe contener la descripción correspondiente con dicho catálogo.",
+		"CODIGOERROR": "CP152",
+		"ERROR": "El valor de la descripción no coincide con una clave del catálogo."
+	},
+	{
+		"NUM": 53.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NombreEstacion",
+		"CASODEVALIDACION": "En caso de que la clave del atributo \"NumEstacion\" sea la referida a una extranjera, se debe registrar el nombre de dicha estación.",
+		"CODIGOERROR": "CP153",
+		"ERROR": "La descripción \"Extranjera\" no es un valor valido para el nombre de la estación."
+	},
+	{
+		"NUM": 54.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Destino:NavegacionTrafico",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteMaritimo\", este atributo debe contener un valor válido, en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP154",
+		"ERROR": "No existe el nodo \"Mercancias:TransporteMaritimo\" y se registra información en el atributo \"Destino:NavegacionTrafico\"."
+	},
+	{
+		"NUM": 55.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicacion:Domicilio",
+		"CASODEVALIDACION": "Si existe el atributo \"Ubicacion:TipoEstacion\", con valor \"02\" que corresponde a \"Intermedia\", y el nodo \"Mercancias:TransporteFerroviario\", este nodo no debe existir.",
+		"CODIGOERROR": "CP155",
+		"ERROR": "El nodo \"Ubicacion:Domicilio\" no debe existir."
+	},
+	{
+		"NUM": 56.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Ubicacion:Domicilio",
+		"CASODEVALIDACION": "Si existe el atributo \"Ubicacion:TipoEstacion\", con un valor \"01\" o \"03\", se debe registrar este nodo.",
+		"CODIGOERROR": "CP156",
+		"ERROR": "Se debe registrar el nodo \"Ubicacion:Domicilio\"."
+	},
+	{
+		"NUM": 57.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Colonia",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre, en caso contrario el atributo “Colonia” debe contener una clave del catálogo \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\", debe ser igual a la clave registrada en el atributo \"CodigoPostal\".",
+		"CODIGOERROR": "CP157",
+		"ERROR": "El atributo \"Domicilio:Colonia\" debe contener una clave del catálogo de \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\" debe ser igual a la clave registrada en el atributo \"CodigoPostal\"."
+	},
+	{
+		"NUM": 58.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Localidad",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre.",
+		"CODIGOERROR": "CP158",
+		"ERROR": "La clave registrada del país es \"MEX\" y el atributo \"Localidad\" no debe ser texto libre."
+	},
+	{
+		"NUM": 59.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Localidad",
+		"CASODEVALIDACION": "El atributo de \"Localidad\" debe contener una clave del catálogo \"catCFDI:c_Localidad\", donde la columna \"c_Estado\", tiene el valor seleccionado en el atributo \"Estado\".",
+		"CODIGOERROR": "CP159",
+		"ERROR": "El atributo \"Domicilio:Localidad\" debe contener una clave del catálogo de \"catCFDI:c_Localidad\", donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo estado si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 60.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Municipio",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"Municipio\" debe contener una clave del catálogo \"catCFDI:c_Municipio\", donde la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\".",
+		"CODIGOERROR": "CP160",
+		"ERROR": "El atributo \"Domicilio:Municipio\" debe contener una clave del catálogo de \"catCFDI:c_Municipio\" donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 61.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Estado",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX, USA o CAN\", se debe registrar texto libre; en caso contrario el atributo \"Estado\" debe contener una clave del catálogo \"catCFDI:c_Estado\", donde la columna \"c_Pais\" tenga el valor \"MEX, USA o CAN\".",
+		"CODIGOERROR": "CP161",
+		"ERROR": "El atributo \"Estado\" no existe o no contiene un valor  o no corresponde con una clave del \"catCFDI:c_Estado\"."
+	},
+	{
+		"NUM": 62.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:Pais",
+		"CASODEVALIDACION": "Este atributo debe contener una clave del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP162",
+		"ERROR": "El atributo \"Domicilio:Pais\" tiene un valor no permitido. "
+	},
+	{
+		"NUM": 63.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Domicilio:CodigoPostal",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"CodigoPostal\" debe contener una clave del catálogo \"catCFDI:c_CodigoPostal\", donde la clave de la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\", la columna \"c_Municipio\", debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna de clave \"c_Localidad\", debe ser igual a la clave registrada en el atributo \"Localidad\".",
+		"CODIGOERROR": "CP163",
+		"ERROR": "El atributo \"Domicilio:CodigoPostal\" debe contener una clave del catálogo de \"catCFDI:c_CodigoPostal\", donde la columna clave de\" c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\", la columna clave de \"c_Municipio\" debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna clave de \"c_Localidad\" debe ser igual a la clave registrada en el atributo \"Localidad\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 64.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias",
+		"CASODEVALIDACION": "Se debe validar que al menos se registre un nodo \"Mercancias:AutortransporteFederal\", \"Mercancias:TransporteMaritimo\", \"Mercancias:TransporteAereo\" o \"Mercancias:TransporteFerroviario\".",
+		"CODIGOERROR": "CP164",
+		"ERROR": "El nodo \"Mercancias\" debe contener por lo menos un nodo \"Mercancias:AutortransporteFederal\", \"Mercancias:TransporteMaritimo\", \"Mercancias:TransporteAereo\" o \"Mercancias:TransporteFerroviario\"."
+	},
+	{
+		"NUM": 65.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:PesoBrutoTotal",
+		"CASODEVALIDACION": "Si existen los nodos “Mercancias:TransporteFerroviario” o “Mercancias:TransporteAereo” este atributo debe contener un valor, en caso contrario este atributo puede no existir.",
+		"CODIGOERROR": "CP165",
+		"ERROR": "El atributo \"Mercancias:PesoBrutoTotal\" no debe existir."
+	},
+	{
+		"NUM": 66.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:PesoBrutoTotal",
+		"CASODEVALIDACION": "Para el caso del nodo “Mercancias:TransporteFerroviario” este atributo debe contener la suma del peso bruto total de los bienes o mercancías que se trasladan vía ferroviaria, que corresponde a la suma de los atributos TransporteFerroviario:Carro:Contenedor:PesoContenedorVacio y TransporteFerroviario:Carro:Contenedor:PesoNetoMercancia. ",
+		"CODIGOERROR": "CP166",
+		"ERROR": "La suma del peso bruto total de los atributos TransporteFerroviario:Carro:Contenedor:PesoContenedorVacio y TransporteFerroviario:Carro:Contenedor:PesoNetoMercancia, no corresponde. "
+	},
+	{
+		"NUM": 67.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:PesoBrutoTotal",
+		"CASODEVALIDACION": "Para el caso del nodo “Mercancias:TransporteAereo” este atributo debe contener el peso bruto total de la mercancía que se traslada por este medio. ",
+		"CODIGOERROR": "CP167",
+		"ERROR": "El atributo \"Mercancias:PesoBrutoTotal\" no debe existir."
+	},
+	{
+		"NUM": 68.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:UnidadPeso",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteFerroviario\" o \"Mercancias:TransporteAereo\" este atributo debe contener un valor del catálogo \"catCartaPorte:c_ClaveUnidadPeso\", en caso contrario este atributo puede no existir.",
+		"CODIGOERROR": "CP168",
+		"ERROR": "El atributo \"Mercancias:UnidadPeso\" tiene un valor no permitido del catálogo \"catCartaPorte:c_ClaveUnidadPeso\"."
+	},
+	{
+		"NUM": 69.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:PesoNetoTotal",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteMaritimo\", este atributo debe ser igual a la suma de los valores registrados en los atributos \"Mercancia:DetalleMercancia:PesoNeto\".",
+		"CODIGOERROR": "CP169",
+		"ERROR": "La suma de los valores registrados en el atributo \"Mercancia:DetalleMercancia:PesoNeto\", no corresponde."
+	},
+	{
+		"NUM": 70.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:PesoNetoTotal",
+		"CASODEVALIDACION": "Si existe el nodo \"Mercancias:TransporteFerroviario\", este atributo debe ser igual a la suma de los valores registrados en los atributos \"TransporteFerroviario:Carro:ToneladasNetasCarro\".",
+		"CODIGOERROR": "CP170",
+		"ERROR": "La suma de los valores registrados en el atributo \"TransporteFerroviario:Carro:ToneladasNetasCarro\", no corresponde."
+	},
+	{
+		"NUM": 71.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancias:NumTotalMercancias",
+		"CASODEVALIDACION": "El valor de este atributo debe ser igual al número de elementos \"Mercancia\" que se registren en el complemento.",
+		"CODIGOERROR": "CP171",
+		"ERROR": "El valor registrado no coincide con el número de elementos \"Mercancia\" que se registraron en el complemento."
+	},
+	{
+		"NUM": 72.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:BienesTransp",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “T” que corresponde a la descripción de “Traslado”, y si solo se registra un tipo de mercancía a nivel concepto, este atributo se puede omitir, en caso contrario se debe registrar la clave de producto que corresponda con la “ClaveProdServ” a nivel concepto.  ",
+		"CODIGOERROR": "CP172",
+		"ERROR": "No se puede omitir cuando existe más de un tipo de mercancía o la clave registrada en el atributo  \"ClaveProdServ\" a nivel CFDI no corresponde a la registrada en este atributo. "
+	},
+	{
+		"NUM": 73.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:BienesTransp",
+		"CASODEVALIDACION": "Si el atributo “TipoDeComprobante” contiene el valor “I” que corresponde a la descripción de “Ingreso”, el valor de este atributo deberá contener una clave del catálogo “catCartaPorte:c_ClaveProdServCP”.",
+		"CODIGOERROR": "CP173",
+		"ERROR": "El tipo de comprobante es distinto de \"I\" y el atributo \"Mercancia:BienesTransp\" tiene una clave diferente del catálogo \"catCartaPorte:c_ClaveProdServCP\"."
+	},
+	{
+		"NUM": 74.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:Descripcion",
+		"CASODEVALIDACION": "Si el tipo de comprobante es \"T\" que corresponde a la descripción de \"Traslado\", y si el atributo \"BienesTransp\" no contiene un valor, este atributo no debe existir.",
+		"CODIGOERROR": "CP174",
+		"ERROR": "No se debe registrar información en el atributo \"Mercancia:Descripcion\"."
+	},
+	{
+		"NUM": 75.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:Cantidad",
+		"CASODEVALIDACION": "Si el tipo de comprobante es “T” que corresponde a la descripción de “Traslado”, y si el atributo “BienesTransp” no existe, este atributo se debe omitir; en caso de que se registre más de un tipo de mercancía a nivel concepto de CFDI este atributo debe existir.",
+		"CODIGOERROR": "CP175",
+		"ERROR": "No se debe registrar información en el atributo \"Mercancia:Cantidad\" cuando solo existe un tipo de mercancía a nivel concepto del CFDI y el tipo de comprobante es “T”."
+	},
+	{
+		"NUM": 76.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:Cantidad",
+		"CASODEVALIDACION": "Si el tipo de comprobante es “I” que corresponde a la descripción de “Ingreso”, este atributo debe existir; en caso contrario se debe omitir, cuando el atributo \"BienesTransp\" no exista.",
+		"CODIGOERROR": "CP176",
+		"ERROR": "El atributo \"BienesTransp\" contiene un valor o el tipo de comprobante es diferente de \"I\". "
+	},
+	{
+		"NUM": 77.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:ClaveUnidad",
+		"CASODEVALIDACION": "Si el tipo de comprobante es “T” que corresponde a la descripción de “Traslado”, y si el atributo “BienesTransp” no existe, este atributo se debe omitir.",
+		"CODIGOERROR": "CP177",
+		"ERROR": "No se debe registrar información en el atributo \"Mercancia:ClaveUnidad\"."
+	},
+	{
+		"NUM": 78.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:ClaveUnidad",
+		"CASODEVALIDACION": "Si el tipo de comprobante es “I” que corresponde a la descripción de “Ingreso”, este atributo debe existir; en caso contrario se debe omitir, cuando el atributo \"BienesTransp\" no exista.",
+		"CODIGOERROR": "CP176",
+		"ERROR": "El atributo \"BienesTransp\" contiene un valor o el tipo de comprobante es diferente de \"I\". "
+	},
+	{
+		"NUM": 79.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:MaterialPeligroso",
+		"CASODEVALIDACION": "Si el valor registrado en el atributo \"BienesTransp\" contiene el valor \"0,1\" o \"1\" en la columna \"Material Peligroso\" del catálogo \"catCartaPorte:c_ClaveProdServCP\", este atributo debe existir, en caso contrario se debe omitir.",
+		"CODIGOERROR": "CP179",
+		"ERROR": "Se debe especificar el atributo \"Mercancia:BienesTransp\" se considera material peligroso."
+	},
+	{
+		"NUM": 80.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:CveMaterialPeligroso",
+		"CASODEVALIDACION": "Si el valor registrado en el atributo \"MaterialPeligroso\" es \"Sí\", este atributo debe contener una clave del \"catCartaPorte:c_MaterialPeligroso\".",
+		"CODIGOERROR": "CP180",
+		"ERROR": "El valor registrado en el atributo \"MaterialPeligroso\" es diferente a las establecidas en el catálogo \"catCartaPorte:c_MaterialPeligroso\"."
+	},
+	{
+		"NUM": 81.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:CveMaterialPeligroso",
+		"CASODEVALIDACION": "Si el valor registrado en el atributo \"MaterialPeligroso\" es \"No\", este atributo no debe existir.",
+		"CODIGOERROR": "CP181",
+		"ERROR": "El atributo \"Mercancia:CveMaterialPeligroso\" no debe existir."
+	},
+	{
+		"NUM": 82.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:Embalaje",
+		"CASODEVALIDACION": "Este atributo debe existir siempre que el atributo \"CveMaterialPeligroso\" tenga un valor del catálogo \"catCartaPorte:c_MaterialPeligroso\", en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP182",
+		"ERROR": "El atributo \"Mercancia:Embalaje\", no debe existir."
+	},
+	{
+		"NUM": 83.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:ValorMercancia",
+		"CASODEVALIDACION": "Si existe el nodo “Mercancias:TransporteAereo” este atributo debe contener un valor. \nPara el caso en el que se registre alguno de los siguientes nodos: “Mercancias:AutotransporteFederal”, Mercancias:TransporteMaritimo” o “Mercancias:TransporteFerroviario” este atributo puede contener un valor.",
+		"CODIGOERROR": "CP183",
+		"ERROR": "El atributo \"ValorMercancia\" debe contener un valor siempre que se registre el nodo “Mercancias:TransporteAereo\"."
+	},
+	{
+		"NUM": 84.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:Moneda",
+		"CASODEVALIDACION": "Si existe el nodo “Mercancias:TransporteAereo\" este atributo debe contener un valor. \nPara el caso en el que se registre alguno de los siguientes nodos: “Mercancias:AutotransporteFederal”, Mercancias:TransporteMaritimo” o “Mercancias:TransporteFerroviario” este atributo puede contener un valor.",
+		"CODIGOERROR": "CP184",
+		"ERROR": "El atributo \"Mercancia:Moneda\" debe contener un valor siempre que se registre el nodo “Mercancias:TransporteAereo\"."
+	},
+	{
+		"NUM": 85.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:FraccionArancelaria",
+		"CASODEVALIDACION": "Si el atributo \"TranspInternac\" contiene el valor \"Sí\", este atributo debe contener alguna de las claves del catálogo \"catComExt:c_FraccionArancelaria\", en caso de que el atributo \"TranspInternac\" contenga el valor \"No\", este atributo no debe existir.",
+		"CODIGOERROR": "CP185",
+		"ERROR": "El atributo \"Mercancia:FraccionArancelaria\" tiene una clave diferente a las establecidas en el catálogo \"catComExt:c_FraccionArancelaria\" o este atributo no debe existir.\n"
+	},
+	{
+		"NUM": 86.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Mercancia:UUIDComercioExt",
+		"CASODEVALIDACION": "Este atributo puede existir siempre que el valor registrado en el atributo \"TranspInternac\" es \"Sí\" y el atributo \"EntradaSalidaMerc\" contiene el valor \"Salida\" y si la exportación es considerada definitiva (De tipo A1), en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP186",
+		"ERROR": "El atributo \"Mercancia:UUIDComercioExt\", contiene una estructura invalida o no debe existir."
+	},
+	{
+		"NUM": 87.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CantidadTransporta",
+		"CASODEVALIDACION": "Si existe más de un nodo \"Ubicacion:Destino\", este nodo puede existir, siempre que los bienes o mercancías que se trasladan se recojan en diferentes orígenes o se entreguen en diferentes destinos.",
+		"CODIGOERROR": "CP187",
+		"ERROR": "Solo se tiene un registro en el nodo \"Ubicacion:Destino\", por lo que no se debe registrar este nodo."
+	},
+	{
+		"NUM": 88.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CantidadTransporta",
+		"CASODEVALIDACION": "En caso de que solo exista un nodo \"Ubicacion:Destino\", este nodo no debe existir.",
+		"CODIGOERROR": "CP188",
+		"ERROR": "Se tiene más de un registro del nodo \"Ubicacion:Destino\", por lo que se debe registrar el nodo \"CantidadTransporta\"."
+	},
+	{
+		"NUM": 89.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CantidadTransporta:IDOrigen",
+		"CASODEVALIDACION": "Si existe el atributo \"Ubicacion:IDOrigen\", el valor que se registre en este atributo debe coincidir con al menos un valor registrado en los atributos \"Ubicacion:IDOrigen\".",
+		"CODIGOERROR": "CP189",
+		"ERROR": "El valor registrado no coincide con un valor registrado en los atributos \"Ubicacion:IDOrigen\"."
+	},
+	{
+		"NUM": 90.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CantidadTransporta:IDDestino",
+		"CASODEVALIDACION": "Si existe el atributo \"Ubicacion:IDDestino\", el valor que se registre en este atributo debe coincidir con al menos un valor registrado en los atributos \"Ubicacion:IDDestino\".",
+		"CODIGOERROR": "CP190",
+		"ERROR": "El valor registrado no coincide con  un valor registrado en los atributos \"Ubicacion:IDDestino\"."
+	},
+	{
+		"NUM": 91.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "CantidadTransporta:CvesTransporte",
+		"CASODEVALIDACION": "Este atributo debe existir solo si hay más de un nodo \"Mercancia\" y más de un tipo de transporte y debe contener un valor del catálogo \"catCartaPorte:c_CveTransporte\"; “Mercancias:TransporteMaritimo”, que corresponde a la clave “02”, “Mercancias:TransporteAereo” con valor “03” o “Mercancias:TransporteFerroviario” con clave “04”; en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP191",
+		"ERROR": "El atributo \"CantidadTransporta:CvesTransporte\" tiene una clave diferente a las establecidas en el catálogo o no existe más de un nodo Mercancia, o no existe mas de tipo de transporte."
+	},
+	{
+		"NUM": 92.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "DetalleMercancia",
+		"CASODEVALIDACION": "Este nodo se debe registrar solo si existe un nodo \"Mercancias:TransporteMaritimo\"; en caso contrario la información de este nodo no debe existir.",
+		"CODIGOERROR": "CP192",
+		"ERROR": "El atributo \"DetalleMercancia\" no debe existir."
+	},
+	{
+		"NUM": 93.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribTranspor",
+		"CASODEVALIDACION": "Cuando exista el atributo “RFCTransportista” este atributo se debe omitir, en caso de que el transportista sea extranjero este atributo debe contener un valor,  para lo cual se debe identificar el país de residencia para efectos fiscales del transportista de acuerdo a la clave del país de residencia fiscal.",
+		"CODIGOERROR": "CP193",
+		"ERROR": "El atributo \"TransporteAereo:RFCTransportista\", esta vacío o ya existe el atributo \"RFCTransportista\" ."
+	},
+	{
+		"NUM": 94.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribTranspor",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.\n",
+		"CODIGOERROR": "CP194",
+		"ERROR": "El atributo \"TransporteAereo:NumRegIdTribTranspor\" no tiene un valor que exista en el registro del país indicado en el atributo \"TransporteAereo:ResidenciaFiscalTranspor\"."
+	},
+	{
+		"NUM": 95.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribTranspor",
+		"CASODEVALIDACION": "Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP195",
+		"ERROR": "El atributo \"TransporteAereo:NumRegIdTribTranspor\" no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"TransporteAereo:ResidenciaFiscalTranspor\"."
+	},
+	{
+		"NUM": 96.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:ResidenciaFiscalTranspor",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo \"RFCTransportista\", este atributo debe contener un valor que corresponda a alguna de las claves del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP196",
+		"ERROR": "El atributo  \"TransporteAereo:ResidenciaFiscalTranspor\" tiene una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\"."
+	},
+	{
+		"NUM": 97.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribEmbarc",
+		"CASODEVALIDACION": "Cuando existe el atributo “RFCEmbarcador”, este atributo se debe omitir, en caso de que el embarcador sea extranjero este atributo debe contener un valor, para lo cual se debe identificar el país de residencia para efectos fiscales del embarcador, de acuerdo a la clave del país de residencia fiscal.",
+		"CODIGOERROR": "CP197",
+		"ERROR": "Los atributos \"TransporteAereo:RFCEmbarcador\" y \"TransporteAereo:NumRegIdTribEmbarc\" están vacíos, o ya existe el atributo \"RFCEmbarcador\"."
+	},
+	{
+		"NUM": 98.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribEmbarc",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.",
+		"CODIGOERROR": "CP198",
+		"ERROR": "El atributo \"TransporteAereo:NumRegIdTribEmbarc\" no tiene un valor que exista en el registro del país indicado en el atributo \"TransporteAereo:ResidenciaFiscalEmbarc\"."
+	},
+	{
+		"NUM": 99.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:NumRegIdTribEmbarc",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP199",
+		"ERROR": "El atributo \"TransporteAereo:NumRegIdTribEmbarc\" no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"TransporteAereo:ResidenciaFiscalEmbarc\"."
+	},
+	{
+		"NUM": 100.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteAereo:ResidenciaFiscalEmbarc",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo \"RFCEmbarcador\", este atributo debe contener un valor que corresponda a alguna de las claves del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP200",
+		"ERROR": "El atributo  \"TransporteAereo:ResidenciaFiscalEmbarc\" tiene una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\"."
+	},
+	{
+		"NUM": 101.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteFerroviario:Concesionario",
+		"CASODEVALIDACION": "Este atributo debe ser diferente del atributo \"Emisor:Rfc\" del comprobante y debe estar contenido en la lista de contribuyentes inscritos no cancelados del SAT (l_RFC), en caso contrario este atributo no debe existir.",
+		"CODIGOERROR": "CP201",
+		"ERROR": "El valor registrado en el atributo \"Concesionario\" es el mismo que el RFC emisor del CFDI o no existe en la lista de contribuyentes no cancelados del SAT (l_RFC). "
+	},
+	{
+		"NUM": 102.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "TransporteFerroviario:Carro:ToneladasNetasCarro",
+		"CASODEVALIDACION": "Si existe el atributo \"Carro:Contenedor:PesoNetoMercancia\" entonces el valor de este atributo debe ser igual a la suma de los valores registrados en los atributos mencionados; en caso contrario se podrá registrar el valor correspondiente a las toneladas netas que contiene el carro.",
+		"CODIGOERROR": "CP202",
+		"ERROR": "El valor registrado en el atributo \"ToneladasNetasCarro\" no corresponde a la suma de los valores registrados en el atributo \"PesoNetoMercancia\". "
+	},
+	{
+		"NUM": 103.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operadores",
+		"CASODEVALIDACION": "Cuando exista el nodo \"Mercancias:AutotransporteFederal\" este nodo debe existir, en caso contrario dicho nodo no debe existir.",
+		"CODIGOERROR": "CP203",
+		"ERROR": "El nodo \"Operadores\" debe existir, siempre que exista el nodo  \"Mercancias:AutotransporteFederal\"."
+	},
+	{
+		"NUM": 104.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:RFCOperador",
+		"CASODEVALIDACION": "Este atributo debe existir siempre que el operador del autotransporte federal sea nacional, en caso contrario se debe omitir este atributo.",
+		"CODIGOERROR": "CP204",
+		"ERROR": "Se debe registrar información en el atributo \"Operador:RFCOperador\" o ya existe información en el atributo \"Operador:NumRegIdTribOperador\"."
+	},
+	{
+		"NUM": 105.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:RFCOperador",
+		"CASODEVALIDACION": "El valor de este atributo debe encontrarse registrado en el listado de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP205",
+		"ERROR": "El valor registrado en el atributo \"Operador:RFCOperador\" no existe en la lista de RFC inscritos no cancelados en el SAT (l_RFC)."
+	},
+	{
+		"NUM": 106.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:NumRegIdTribOperador",
+		"CASODEVALIDACION": "Cuando se registre el atributo “RFCOperador”, este atributo se debe omitir, en caso de que el operador sea extranjero este atributo debe contener un valor, para lo cual se debe identificar el país de residencia para efectos fiscales del operador, usando la clave del país registrada en el atributo Operador:ResidenciaFiscalOperador.",
+		"CODIGOERROR": "CP206",
+		"ERROR": "Existe información en el atributo \"Operador:RFCOperador\" o la clave del país registrada en el atributo \"Operador:ResidenciaFiscalOperador\" no corresponde con el valor registrado en el atributo \"Operador:NumRegIdTribOperador\"."
+	},
+	{
+		"NUM": 107.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:NumRegIdTribOperador",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.\n",
+		"CODIGOERROR": "CP207",
+		"ERROR": "El atributo \"Operador:NumRegIdTribOperador\", no tiene un valor que exista en el registro del país indicado en el atributo \"Operador:ResidenciaFiscalOperador\"."
+	},
+	{
+		"NUM": 108.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:NumRegIdTribOperador",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\n\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).\n",
+		"CODIGOERROR": "CP208",
+		"ERROR": "El atributo \"Operador:NumRegIdTribOperador\", no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"Operador:ResidenciaFiscalOperador\"."
+	},
+	{
+		"NUM": 109.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:ResidenciaFiscalOperador",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo “RFCOperador”, y si existe información en el atributo  “NumRegIdTribOperador”, este atributo debe existir y debe contener un valor que corresponda a alguna de las claves del catálogo “catCFDI:c_Pais”.",
+		"CODIGOERROR": "CP209",
+		"ERROR": "Los atributos \"Operador:ResidenciaFiscalOperador\" y “Operador:NumRegIdTribOperador” tienen una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\" para su validación."
+	},
+	{
+		"NUM": 110.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Colonia",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre, en caso contrario el atributo “Colonia” debe contener una clave del catálogo \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\", debe ser igual a la clave registrada en el atributo \"CodigoPostal\".",
+		"CODIGOERROR": "CP210",
+		"ERROR": "El atributo \"Operador:Domicilio:Colonia\" debe contener una clave del catálogo de \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\" debe ser igual a la clave registrada en el atributo \"CodigoPostal\"."
+	},
+	{
+		"NUM": 111.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Localidad",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre.",
+		"CODIGOERROR": "CP211",
+		"ERROR": "La clave del atributo \"Operador:Domicilio:Localidad\" no corresponde a la clave del país registrado."
+	},
+	{
+		"NUM": 112.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Localidad",
+		"CASODEVALIDACION": "El atributo de \"Localidad\" debe contener una clave del catálogo \"catCFDI:c_Localidad\", donde la columna \"c_Estado\", tiene el valor seleccionado en el atributo \"Estado\".",
+		"CODIGOERROR": "CP212",
+		"ERROR": "El atributo \"Operador:Domicilio:Localidad\" debe contener una clave del catálogo de \"catCFDI:c_Localidad\", donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo estado si el atributo \"Pais\" tiene el valor \"MEX\". "
+	},
+	{
+		"NUM": 113.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Municipio",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"Municipio\" debe contener una clave del catálogo \"catCFDI:c_Municipio\", donde la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\".",
+		"CODIGOERROR": "CP213",
+		"ERROR": "El atributo \"Operador:Domicilio:Municipio\" debe contener una clave del catálogo de \"catCFDI:c_Municipio\" donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 114.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Estado",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX, USA o CAN\", se debe registrar texto libre; en caso contrario el atributo \"Estado\" debe contener una clave del catálogo \"catCFDI:c_Estado\", donde la columna \"c_Pais\" tenga el valor \"MEX, USA o CAN\".",
+		"CODIGOERROR": "CP214",
+		"ERROR": "El atributo \"Operador:Domicilio:Estado\" no existe o no contiene un valor  o no corresponde con una clave del \"catCFDI:c_Estado\"."
+	},
+	{
+		"NUM": 115.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:Pais",
+		"CASODEVALIDACION": "Este atributo debe contener una clave del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP215",
+		"ERROR": "El atributo \"Operador:Domicilio:Pais\" tiene un valor no permitido. "
+	},
+	{
+		"NUM": 116.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Operador:Domicilio:CodigoPostal",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"CodigoPostal\" debe contener una clave del catálogo \"catCFDI:c_CodigoPostal\", donde la clave de la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\", la columna \"c_Municipio\", debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna de clave \"c_Localidad\", debe ser igual a la clave registrada en el atributo \"Localidad\".",
+		"CODIGOERROR": "CP216",
+		"ERROR": "El atributo \"Operador:Domicilio:CodigoPostal\" debe contener una clave del catálogo de \"catCFDI:c_CodigoPostal\", donde la columna clave de\" c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\", la columna clave de \"c_Municipio\" debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna clave de \"c_Localidad\" debe ser igual a la clave registrada en el atributo \"Localidad\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 117.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"I\" que corresponde a la descripción de “Ingreso”, el emisor del comprobante debe ser distinto al propietario de los medios de transporte por los que se trasladan los bienes o mercancías, en caso contrario este nodo se debe omitir.",
+		"CODIGOERROR": "CP217",
+		"ERROR": "La información del propietario debe ser distinta a la del emisor del CFDI, o no debe existir este nodo."
+	},
+	{
+		"NUM": 118.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:RFCPropietario",
+		"CASODEVALIDACION": "El valor de este atributo debe encontrarse registrado en el listado de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP218",
+		"ERROR": "El valor capturado en el atributo \"Propietario:RFCPropietario\"  no existe en la lista de contribuyentes no cancelados del SAT (l_RFC). "
+	},
+	{
+		"NUM": 119.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:NumRegIdTribPropietario",
+		"CASODEVALIDACION": "Cuando se registre el atributo “RFCPropietario”, este atributo se debe omitir, en caso de que el propietario sea extranjero este atributo debe contener un valor, para lo cual se debe identificar el país de residencia para efectos fiscales del propietario, usando la clave del país registrada en el atributo Propietario:ResidenciaFiscalPropietario.",
+		"CODIGOERROR": "CP219",
+		"ERROR": "Existe información en el atributo \"Propietario:RFCPropietario\" o la clave del país registrada en el atributo \"Propietario:ResidenciaFiscalPropietario\" no corresponde con el valor registrado en el atributo \"Propietario:NumRegIdTribPropietario\"."
+	},
+	{
+		"NUM": 120.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:NumRegIdTribPropietario",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.",
+		"CODIGOERROR": "CP220",
+		"ERROR": "El atributo \"Propietario:NumRegIdTribPropietario\" no tiene un valor que exista en el registro del país indicado en el atributo \"Propietario:ResidenciaFiscalPropietario\"."
+	},
+	{
+		"NUM": 121.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:NumRegIdTribPropietario",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\n\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP221",
+		"ERROR": "El atributo \"Propietario:NumRegIdTribPropietario\" no cumple con el patrón publicado en la columna \"Formato de Registro de Identidad Tributaria\" del país indicado en el atributo \"Propietario:ResidenciaFiscalPropietario\"."
+	},
+	{
+		"NUM": 122.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:ResidenciaFiscalPropietario",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo “RFCPropietario”, y si existe información en el atributo  “NumRegIdTribPropietario”, este atributo debe existir y debe contener un valor que corresponda a alguna de las claves del catálogo “catCFDI:c_Pais”.",
+		"CODIGOERROR": "CP222",
+		"ERROR": "Los atributos \"Propietario:ResidenciaFiscalPropietario\" y “Propietario:NumRegIdTribPropietario” tienen una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\" para su validación."
+	},
+	{
+		"NUM": 123.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Colonia",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre, en caso contrario el atributo “Colonia” debe contener una clave del catálogo \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\", debe ser igual a la clave registrada en el atributo \"CodigoPostal\".",
+		"CODIGOERROR": "CP223",
+		"ERROR": "El atributo \"Propietario:Domicilio:Colonia\" debe contener una clave del catálogo de \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\" debe ser igual a la clave registrada en el atributo \"CodigoPostal\"."
+	},
+	{
+		"NUM": 124.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Localidad",
+		"CASODEVALIDACION": "Si la clave de país es diferente de \"MEX\", se debe registrar texto libremente.",
+		"CODIGOERROR": "CP224",
+		"ERROR": "La clave del atributo \"Propietario:Domicilio:Localidad\" no corresponde a la clave del país registrado."
+	},
+	{
+		"NUM": 125.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Localidad",
+		"CASODEVALIDACION": "El atributo de \"Localidad\" debe contener una clave del catálogo \"catCFDI:c_Localidad\", donde la columna \"c_Estado\", tiene el valor seleccionado en el atributo \"Estado\".",
+		"CODIGOERROR": "CP225",
+		"ERROR": "El atributo \"Propietario:Domicilio:Localidad\" debe contener una clave del catálogo de \"catCFDI:c_Localidad\", donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo estado si el atributo \"Pais\" tiene el valor \"MEX\". "
+	},
+	{
+		"NUM": 126.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Municipio",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"Municipio\" debe contener una clave del catálogo \"catCFDI:c_Municipio\", donde la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\".",
+		"CODIGOERROR": "CP226",
+		"ERROR": "El atributo \"Propietario:Domicilio:Municipio\" debe contener una clave del catálogo de \"catCFDI:c_Municipio\" donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 127.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Estado",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX, USA o CAN\", se debe registrar texto libre; en caso contrario el atributo \"Estado\" debe contener una clave del catálogo \"catCFDI:c_Estado\", donde la columna \"c_Pais\" tenga el valor \"MEX, USA o CAN\".",
+		"CODIGOERROR": "CP227",
+		"ERROR": "El atributo \"Propietario:Domicilio:Estado\" no existe o no contiene un valor  o no corresponde con una clave del \"catCFDI:c_Estado\"."
+	},
+	{
+		"NUM": 128.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:Pais",
+		"CASODEVALIDACION": "Este atributo debe contener una clave del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP228",
+		"ERROR": "El atributo \"Propietario:Domicilio:Pais\" tiene un valor no permitido. "
+	},
+	{
+		"NUM": 129.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Propietario:Domicilio:CodigoPostal",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"CodigoPostal\" debe contener una clave del catálogo \"catCFDI:c_CodigoPostal\", donde la clave de la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\", la columna \"c_Municipio\", debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna de clave \"c_Localidad\", debe ser igual a la clave registrada en el atributo \"Localidad\".",
+		"CODIGOERROR": "CP229",
+		"ERROR": "El atributo \"Propietario:Domicilio:CodigoPostal\" debe contener una clave del catálogo de \"catCFDI:c_CodigoPostal\", donde la columna clave de\" c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\", la columna clave de \"c_Municipio\" debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna clave de \"c_Localidad\" debe ser igual a la clave registrada en el atributo \"Localidad\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 130.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario",
+		"CASODEVALIDACION": "Si el atributo \"TipoDeComprobante\" contiene el valor \"I\" que corresponde a la descripción de “Ingreso”, y el emisor del comprobante traslada los bienes o mercancías con un medio de transporte arrendado, entonces debe registrar la información que se requiere; en caso contrario este nodo se debe omitir.",
+		"CODIGOERROR": "CP230",
+		"ERROR": "La información del arrendatario es igual a la del emisor del comprobante o no existe el nodo \"Arrendatario\"."
+	},
+	{
+		"NUM": 131.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:RFCArrendatario",
+		"CASODEVALIDACION": "El valor de este atributo debe encontrarse registrado en el listado de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP231",
+		"ERROR": "El valor capturado en el atributo \"Arrendatario:RFCArrendatario\" no existe en la lista de RFC inscritos no cancelados del SAT (l_RFC)."
+	},
+	{
+		"NUM": 132.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:NumRegIdTribArrendatario",
+		"CASODEVALIDACION": "Cuando se registre el atributo “RFCArrendatario”, este atributo se debe omitir, en caso de que el arrendatario sea extranjero este atributo debe contener un valor, para lo cual se debe identificar el país de residencia para efectos fiscales del arrendatario, usando la clave del país registrada en el atributo Arrendatario:ResidenciaFiscalArrendatario.",
+		"CODIGOERROR": "CP232",
+		"ERROR": "Existe información en el atributo \"Arrendatario:RFCArrendatario\" o la clave del país registrada en el atributo \"Arrendatario:ResidenciaFiscalArrendatario\" no corresponde con el valor registrado en el atributo \"Arrendatario:NumRegIdTribArrendatario\"."
+	},
+	{
+		"NUM": 133.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:NumRegIdTribArrendatario",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.",
+		"CODIGOERROR": "CP233",
+		"ERROR": "El  atributo \"Arrendatario:NumRegIdTribArrendatario\" no tiene un valor que exista en el registro del país indicado en el atributo \"Arrendatario:ResidenciaFiscalArrendatario\"."
+	},
+	{
+		"NUM": 134.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:NumRegIdTribArrendatario",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\".\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\n\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP234",
+		"ERROR": "El  atributo \"Arrendatario:NumRegIdTribArrendatario\" no cumple con el patrón publicado en la columna \"Formato de Registro de Identidad Tributaria\" del país indicado en el atributo \"Arrendatario:ResidenciaFiscalArrendatario\"."
+	},
+	{
+		"NUM": 135.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:ResidenciaFiscalArrendatario",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo “RFCArrendatario”, y si existe información en el atributo  “NumRegIdTribArrendatario”, este atributo debe existir y debe contener un valor que corresponda a alguna de las claves del catálogo “catCFDI:c_Pais”.",
+		"CODIGOERROR": "CP235",
+		"ERROR": "Los atributos \"Arrendatario:ResidenciaFiscalArrendatario\" y “Arrendatario:NumRegIdTribArrendatario” tienen una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\" para su validación."
+	},
+	{
+		"NUM": 136.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Colonia",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre, en caso contrario el atributo “Colonia” debe contener una clave del catálogo \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\", debe ser igual a la clave registrada en el atributo \"CodigoPostal\".",
+		"CODIGOERROR": "CP236",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:Colonia\" debe contener una clave del catálogo de \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\" debe ser igual a la clave registrada en el atributo \"CodigoPostal\"."
+	},
+	{
+		"NUM": 137.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Localidad",
+		"CASODEVALIDACION": "Si la clave de país es diferente de \"MEX\", se debe registrar texto libremente.",
+		"CODIGOERROR": "CP237",
+		"ERROR": "La clave del atributo \"Arrendatario:Domicilio:Localidad\" no corresponde a la clave del país registrado."
+	},
+	{
+		"NUM": 138.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Localidad",
+		"CASODEVALIDACION": "El atributo de \"Localidad\" debe contener una clave del catálogo \"catCFDI:c_Localidad\", donde la columna \"c_Estado\", tiene el valor seleccionado en el atributo \"Estado\".",
+		"CODIGOERROR": "CP238",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:Localidad\" debe contener una clave del catálogo de \"catCFDI:c_Localidad\", donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo estado si el atributo \"Pais\" tiene el valor \"MEX\". "
+	},
+	{
+		"NUM": 139.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Municipio",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"Municipio\" debe contener una clave del catálogo \"catCFDI:c_Municipio\", donde la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\".",
+		"CODIGOERROR": "CP239",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:Municipio\" debe contener una clave del catálogo de \"catCFDI:c_Municipio\" donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 140.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Estado",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX, USA o CAN\", se debe registrar texto libre; en caso contrario el atributo \"Estado\" debe contener una clave del catálogo \"catCFDI:c_Estado\", donde la columna \"c_Pais\" tenga el valor \"MEX, USA o CAN\".",
+		"CODIGOERROR": "CP240",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:Estado\" no existe o no contiene un valor  o no corresponde con una clave del \"catCFDI:c_Estado\"."
+	},
+	{
+		"NUM": 141.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:Pais",
+		"CASODEVALIDACION": "Este atributo debe contener una clave del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP241",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:Pais\" tiene un valor no permitido. "
+	},
+	{
+		"NUM": 142.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Arrendatario:Domicilio:CodigoPostal",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"CodigoPostal\" debe contener una clave del catálogo \"catCFDI:c_CodigoPostal\", donde la clave de la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\", la columna \"c_Municipio\", debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna de clave \"c_Localidad\", debe ser igual a la clave registrada en el atributo \"Localidad\".",
+		"CODIGOERROR": "CP242",
+		"ERROR": "El atributo \"Arrendatario:Domicilio:CodigoPostal\" debe contener una clave del catálogo de \"catCFDI:c_CodigoPostal\", donde la columna clave de\" c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\", la columna clave de \"c_Municipio\" debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna clave de \"c_Localidad\" debe ser igual a la clave registrada en el atributo \"Localidad\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 143.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:RFCNotificado",
+		"CASODEVALIDACION": "En caso de que exista el nodo \"CartaPorte:Mercancias:TransporteMaritimo\", y la persona a notificar del arribo de la embarcación sea nacional, se debe registrar este atributo, en caso de que la persona a notificar del arribo sea extranjera este atributo se debe omitir.",
+		"CODIGOERROR": "CP243",
+		"ERROR": "Se debe registrar información en el atributo \"Notificado:RFCNotificado\" o ya existe información en el atributo \"Notificado:NumRegIDTribNotificado\"."
+	},
+	{
+		"NUM": 144.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:RFCNotificado",
+		"CASODEVALIDACION": "El valor de este atributo debe encontrarse registrado en el listado de RFC inscritos no cancelados del SAT l_RFC.",
+		"CODIGOERROR": "CP244",
+		"ERROR": "El valor capturado en el atributo \"Notificado:RFCNotificado\" no existe en la lista de RFC inscritos no cancelados del SAT (l_RFC)."
+	},
+	{
+		"NUM": 145.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:NumRegIdTribNotificado",
+		"CASODEVALIDACION": "Cuando se registra el atributo “RFCNotificado”, este atributo se debe omitir, en caso de que el notificado sea extranjero este atributo debe contener un valor, para lo cual se debe  identificar el país de residencia para efectos fiscales del Notificado usando el atributo \"ResidenciaFiscalNotificado\" del elemento “Notificado”. ",
+		"CODIGOERROR": "CP245",
+		"ERROR": "Existe información en el atributo \"Notificado:RFCNotificado\" o la clave del país registrada en el atributo \"ResidenciaFiscalNotificado\" no corresponde con el valor registrado en el atributo \"NumRegIdTribNotificado\"."
+	},
+	{
+		"NUM": 146.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:NumRegIdTribNotificado",
+		"CASODEVALIDACION": "Si la clave del país corresponde a un país del catálogo \"catCFDI:c_Pais\" donde la columna \"Formato de Registro de Identidad Tributaria\" tiene un valor:\n\n• Si tiene mecanismo de verificación en línea (hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe existir en el registro del país.\n",
+		"CODIGOERROR": "CP246",
+		"ERROR": "El atributo \"Notificado:NumRegIdTribNotificado\" no contiene un valor que exista en el registro del país indicado en el atributo \"Notificado:ResidenciaFiscalNotificado\"."
+	},
+	{
+		"NUM": 147.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:NumRegIdTribNotificado",
+		"CASODEVALIDACION": "• Si no tiene mecanismo de verificación (no hay valor en la columna \"Validación del Registro de Identidad Tributaria\"), debe cumplir con el patrón que se publique en la columna \"Formato de Registro de Identidad Tributaria\"\n\nEjemplo de mecanismo: Validar contra archivo de \"NumRegIdTrib\" validados del país que publique el SAT.\n\nEjemplo de patrón para el \"NumRegIdTrib\" de USA: ([0-9]{9}).",
+		"CODIGOERROR": "CP247",
+		"ERROR": "El atributo \"Notificado:NumRegIdTribNotificado\" no cumple con el patrón publicado en la columna \"Formato de registro de identidad tributaria\" del país indicado en el atributo \"Notificado:ResidenciaFiscalNotificado\"."
+	},
+	{
+		"NUM": 148.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:ResidenciaFiscalNotificado",
+		"CASODEVALIDACION": "Si no se registra valor en el atributo “RFCNotificado”, y si existe información en el atributo  “NumRegIdTribNotificado”, este atributo debe existir y debe contener un valor que corresponda a alguna de las claves del catálogo “catCFDI:c_Pais”.",
+		"CODIGOERROR": "CP248",
+		"ERROR": "Los atributos \"Notificado:ResidenciaFiscalNotificado\" y “Notificado:NumRegIdTribNotificado” tienen una clave diferente a las establecidas en el catálogo \"catCFDI:c_Pais\" para su validación."
+	},
+	{
+		"NUM": 149.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Colonia",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre, en caso contrario el atributo “Colonia” debe contener una clave del catálogo \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\", debe ser igual a la clave registrada en el atributo \"CodigoPostal\".",
+		"CODIGOERROR": "CP249",
+		"ERROR": "El atributo \"Notificado:Domicilio:Colonia\" debe contener una clave del catálogo de \"catCFDI:c_Colonia\", donde la columna \"c_CodigoPostal\" debe ser igual a la clave registrada en el atributo \"CodigoPostal\"."
+	},
+	{
+		"NUM": 150.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Localidad",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre.",
+		"CODIGOERROR": "CP250",
+		"ERROR": "La clave del atributo \"Notificado:Domicilio:Localidad\" no corresponde a la clave del país registrado."
+	},
+	{
+		"NUM": 151.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Localidad",
+		"CASODEVALIDACION": "El atributo de \"Localidad\" debe contener una clave del catálogo \"catCFDI:c_Localidad\", donde la columna \"c_Estado\", tiene el valor seleccionado en el atributo \"Estado\".",
+		"CODIGOERROR": "CP251",
+		"ERROR": "El atributo \"Notificado:Domicilio:Localidad\" debe contener una clave del catálogo de \"catCFDI:c_Localidad\", donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo estado si el atributo \"Pais\" tiene el valor \"MEX\". "
+	},
+	{
+		"NUM": 152.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Municipio",
+		"CASODEVALIDACION": "Si la clave del país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"Municipio\" debe contener una clave del catálogo \"catCFDI:c_Municipio\", donde la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\".",
+		"CODIGOERROR": "CP252",
+		"ERROR": "El atributo \"Notificado:Domicilio:Municipio\" debe contener una clave del catálogo de \"catCFDI:c_Municipio\" donde la columna clave de \"c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	},
+	{
+		"NUM": 153.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Estado",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX, USA o CAN\", se debe registrar texto libre; en caso contrario el atributo \"Estado\" debe contener una clave del catálogo \"catCFDI:c_Estado\", donde la columna \"c_Pais\" tenga el valor \"MEX, USA o CAN\".",
+		"CODIGOERROR": "CP253",
+		"ERROR": "El atributo \"Notificado:Domicilio:Estado\" no existe o no contiene un valor  o no corresponde con una clave del \"catCFDI:c_Estado\"."
+	},
+	{
+		"NUM": 154.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:Pais",
+		"CASODEVALIDACION": "Este atributo debe contener una clave del catálogo \"catCFDI:c_Pais\".",
+		"CODIGOERROR": "CP254",
+		"ERROR": "El atributo \"Notificado:Domicilio:Pais\" tiene un valor no permitido. "
+	},
+	{
+		"NUM": 155.0,
+		"ELEMENTO": "CartaPorte",
+		"ATRIBUTO": "Notificado:Domicilio:CodigoPostal",
+		"CASODEVALIDACION": "Si la clave de país es distinta a \"MEX\", se debe registrar texto libre; en caso contrario el atributo \"CodigoPostal\" debe contener una clave del catálogo \"catCFDI:c_CodigoPostal\", donde la clave de la columna \"c_Estado\", debe ser igual a la clave registrada en el atributo \"Estado\", la columna \"c_Municipio\", debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna de clave \"c_Localidad\", debe ser igual a la clave registrada en el atributo \"Localidad\".",
+		"CODIGOERROR": "CP255",
+		"ERROR": "El atributo \"Notificado:Domicilio:CodigoPostal\" debe contener una clave del catálogo de \"catCFDI:c_CodigoPostal\", donde la columna clave de\" c_Estado\" debe ser igual a la clave registrada en el atributo \"Estado\", la columna clave de \"c_Municipio\" debe ser igual a la clave registrada en el atributo \"Municipio\", y si existe el atributo de \"Localidad\", la columna clave de \"c_Localidad\" debe ser igual a la clave registrada en el atributo \"Localidad\" si el atributo \"Pais\" tiene el valor \"MEX\"."
+	}
+]

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ValidaTimbraPruebaResponse xmlns="https://ws.invoiceone.mx/FachadaCORE"><ValidaTimbraPruebaResult><IDOperacion>134125</IDOperacion><Estatus>ERROR</Estatus><Saldo>0</Saldo><MensajeError>System.Web.Services.Protocols.SoapException: CP125 La clave registrada en el atributo "TipoEstacion" es diferente a las contenidas en el catálogo "c_TipoEstacion" o se registro el nodo "Mercancias:AutotransporteFederal".
+   en CartaPorte.Complemento.Validate(String xmlComplemento, Comprobante comprobante, String xmlComprobante)
+   en IO.XmlValidation.Cfdi.Provider33.ValidateXml(Boolean isProduction, XmlDocument xmlDocument)
+   en IO.TFS.WSCore.CoreTFS.ProcessDocument(String userName, String password, Boolean isProduction, String xml)
+   en IO.TFS.WSCore.CoreTFS.ObtenerTFD(String userName, String password, Boolean isProduction, String xml)</MensajeError><CodigoError>500</CodigoError></ValidaTimbraPruebaResult></ValidaTimbraPruebaResponse></soap:Body></soap:Envelope>
